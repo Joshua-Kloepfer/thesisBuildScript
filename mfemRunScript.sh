@@ -10,7 +10,7 @@ dim=$6
 
 ulimit -s unlimited
 
-echo "RUNNING WITH: minElem:$minElem, maxElem:$maxElem, elemIncr:$elemIncr, useCab:$useCab, runsPer:$runsPer, order: $order, dim: $dim"
+echo "RUNNING WITH: minElem:$minElem, maxElem:$maxElem, elemIncr:$elemIncr, runsPer:$runsPer, order: $order, dim: $dim"
 
 for numElem in $(awk -v min="$minElem" -v max="$maxElem" -v incr="$elemIncr" 'BEGIN {
 	for(i=min; i<=max; i = int(i * incr)) print i}'); do
